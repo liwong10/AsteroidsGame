@@ -23,8 +23,8 @@ public Spaceship(){
   	myColor=50;   
   	myCenterX=(Math.random()*500);
   	myCenterY=(Math.random()*500); //holds center coordinates   
-  	myDirectionX=2;
-  	myDirectionY=2; //holds x and y coordinates of the vector for direction of travel   
+  	myDirectionX=0;
+  	myDirectionY=0; //holds x and y coordinates of the vector for direction of travel   
   	myPointDirection= (Math.random()*360); //holds current direction the ship is pointing in degrees    
 	}
 }
