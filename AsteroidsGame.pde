@@ -34,12 +34,12 @@ public void keyTyped(){
   	  	laura.setDirectionX(0);
   			laura.setDirectionY(0);
   			laura.setPointDirection((int)(Math.random()*360));
-      		System.out.println('h');
+      		//System.out.println('h');
             laura.setY((int) (Math.random()*500));
             laura.setX((int) (Math.random()*500));}
           
   if (key=='a'){
-    System.out.println('a');
+    //System.out.println('a');
     laura.turn(-15);
   }
   if (key=='d'){
