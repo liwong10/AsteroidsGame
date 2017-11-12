@@ -1,5 +1,6 @@
 Spaceship laura= new Spaceship();
 Stars [] cons= new Stars[500];
+Asteroid [] keenan= new Asteroid[20];
 //Stars [] stars;
 //your variable declarations here
 public void setup() 
@@ -10,6 +11,9 @@ public void setup()
 	for (int i=0; i< cons.length;i++){
 		cons[i]= new Stars();
 	}
+  for (int i=0; i< keenan.length;i++){
+    keenan[i]= new Asteroid();
+  }
 
 
   //your code here
@@ -25,8 +29,12 @@ public void draw()
   laura.move();
 for (int i=0; i<cons.length;i++){
 	cons[i].show();
-}
 
+}
+  for (int i=0; i< keenan.length;i++){
+      keenan[i].show();
+      keenan[i].move();
+  }
   //your code here
 }
 public void keyTyped(){
