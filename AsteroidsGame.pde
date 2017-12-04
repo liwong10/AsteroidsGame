@@ -11,7 +11,7 @@ public void setup()
 	for (int i=0; i< cons.length;i++){
 		cons[i]= new Stars();
 	}
-  for (int i=0; i< 2;i++){
+  for (int i=0; i< 20;i++){
       Asteroid moreAsteroids = new Asteroid();
       asteroids.add(i, moreAsteroids);
   }
@@ -35,7 +35,7 @@ for (int i=0; i<cons.length;i++){
 
 }
   for (Asteroid girls:asteroids){
-      //girls.move();
+      girls.move();
       girls.show();
   }
     for (Asteroid boys:asteroids){
