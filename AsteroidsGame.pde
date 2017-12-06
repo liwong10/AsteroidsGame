@@ -1,6 +1,7 @@
 Spaceship laura= new Spaceship();
 Stars [] cons= new Stars[500];
 ArrayList <Asteroid> asteroids= new ArrayList <Asteroid>();
+Bullet pew= new Bullet(laura);
 //Stars [] stars;
 //your variable declarations here
 public void setup() 
@@ -15,6 +16,7 @@ public void setup()
       Asteroid moreAsteroids = new Asteroid();
       asteroids.add(i, moreAsteroids);
   }
+  pew=new Bullet(laura);
 
   }
 
@@ -24,7 +26,7 @@ public void setup()
 
 public void draw() 
 {
-
+ 
   background(255);
   laura.show();
   laura.getDirectionX();
@@ -38,10 +40,12 @@ for (int i=0; i<cons.length;i++){
       girls.move();
       girls.show();
   }
-    for (Asteroid boys:asteroids){
-      if ((dist(laura.getX(),laura.getY(),boys.getX(),boys.getY())<10))
-      asteroids.remove(boys);
+    for (int i=0; i<asteroids.size();i++){
+      if ((dist(laura.getX(),laura.getY(),asteroids.get(i).getX(),asteroids.get(i).getY())<16))
+      asteroids.remove(i);
   }
+  pew.show();
+  pew.move();
 
   //your code here
 }
@@ -64,5 +68,5 @@ public void keyTyped(){
   if (key=='w'){
    laura.accelerate(.2); 
   }
-   
+    
  }
