@@ -18,8 +18,8 @@ class Bullet extends Floater {
   	myDirectionY= 5* Math.sin(dRadians)+theShip.getY();
   }
   public void show(){
-  	fill(190,210,200);
-  	ellipse(20,20,100,100);
+  	fill(((int)Math.random()*50+200),((int)Math.random()*50+200),((int)Math.random()*50+200));
+  	ellipse((float)laura.getX(),(float)laura.getY(),(float)100,(float)100);
   }
 
 }

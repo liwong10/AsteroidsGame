@@ -2,10 +2,13 @@ Spaceship laura= new Spaceship();
 Stars [] cons= new Stars[500];
 ArrayList <Asteroid> asteroids= new ArrayList <Asteroid>();
 Bullet pew= new Bullet(laura);
-//Stars [] stars;
+ArrayList <Bullet> bang= new ArrayList <Bullet>();
+Stars [] stars;
+Bullet addBullet= new Bullet(laura);
 //your variable declarations here
-public void setup() 
+public void setup()
 {
+  
 	size(500,500);
   background(255);
 	laura=new Spaceship();
@@ -17,7 +20,7 @@ public void setup()
       asteroids.add(i, moreAsteroids);
   }
   pew=new Bullet(laura);
-
+  
   }
 
 
@@ -26,8 +29,10 @@ public void setup()
 
 public void draw() 
 {
- 
+
   background(255);
+   pew.show();
+  pew.move();
   laura.show();
   laura.getDirectionX();
   laura.getDirectionY();
@@ -44,8 +49,7 @@ for (int i=0; i<cons.length;i++){
       if ((dist(laura.getX(),laura.getY(),asteroids.get(i).getX(),asteroids.get(i).getY())<16))
       asteroids.remove(i);
   }
-  pew.show();
-  pew.move();
+  
 
   //your code here
 }
@@ -68,5 +72,7 @@ public void keyTyped(){
   if (key=='w'){
    laura.accelerate(.2); 
   }
-    
+   if (key==' '){
+    bang.add(addBullet);
+   }
  }
